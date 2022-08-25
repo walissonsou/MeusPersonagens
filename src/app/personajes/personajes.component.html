@@ -1,0 +1,10 @@
+<h2> {{ Personaje.name | uppercase }} - Details </h2>
+<div><span> id: </span> {{ Personaje.id }}</div>
+<div><span> name: </span> {{ Personaje.name }}</div>
+<div><span> QI: </span> {{ Personaje.QI }}</div>
+
+<div>
+  <label for="name"> Personaje name:</label>
+  <input id="name" type="text" [(ngModel)]="Personaje.name" placeholder="name">
+  <button style="margin-left: 4px; border-radius: 2px; background-color: green"> Add item </button>
+</div>
