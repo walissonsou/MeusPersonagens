@@ -10,3 +10,12 @@ button {
   border-radius: 2px;
   background-color: green
 }
+.personaje {
+  cursor:pointer
+}
+li.selected {
+
+  color: red;
+  background: gray;
+
+}

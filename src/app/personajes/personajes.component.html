@@ -1,7 +1,12 @@
 <div class="container">
   <h2>Meus personagens favoritos de TKOF</h2>
-  <ul>
-    <li *ngFor="let personaje of personajes" (click)="SearchDetail(personaje)">
+  <ul class="personaje">
+    <li
+    *ngFor="let personaje of personajes"
+    [class.selected]=" personaje === selectedPersonaje"
+    (click)="SearchDetail(personaje)"
+
+     >
       <span> {{ personaje.id }} </span> {{ personaje.name }} -
       {{ personaje.QI }}
     </li>
