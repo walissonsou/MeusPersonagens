@@ -5,27 +5,10 @@
     *ngFor="let personaje of personajes"
     [class.selected]=" personaje === selectedPersonaje"
     (click)="SearchDetail(personaje)"
-
      >
       <span> {{ personaje.id }} </span> {{ personaje.name }} -
       {{ personaje.QI }}
     </li>
   </ul>
 </div>
-<div *ngIf="selectedPersonaje">
-  <h2>{{ selectedPersonaje.name | uppercase }} - Details</h2>
-  <div><span> id: </span> {{ selectedPersonaje.id }}</div>
-  <div><span> name: </span> {{ selectedPersonaje.name }}</div>
-  <div><span> QI: </span> {{ selectedPersonaje.QI }}</div>
-
-  <div>
-    <label for="name"> Personaje name:</label>
-    <input
-      id="name"
-      type="text"
-      [(ngModel)]="selectedPersonaje.name"
-      placeholder="name"
-    />
-    <button>Buscar detalhe</button>
-  </div>
-</div>
+<app-personaje-details [personaje]="selectedPersonaje"></app-personaje-details>

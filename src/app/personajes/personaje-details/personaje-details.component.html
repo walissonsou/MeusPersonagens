@@ -1,0 +1,17 @@
+<div *ngIf="personaje">
+  <h2>{{ personaje.name  }} - Details</h2>
+  <div><span> id: </span> {{ personaje.id }}</div>
+  <div><span> name: </span> {{ personaje.name }}</div>
+  <div><span> QI: </span> {{ personaje.QI }}</div>
+
+  <div>
+    <label for="name"> Personaje name:</label>
+    <input
+      id="name"
+      [(ngModel)]="personaje.name"
+      type="text"
+      placeholder="name"
+    />
+    <button>Buscar detalhe</button>
+  </div>
+</div>
