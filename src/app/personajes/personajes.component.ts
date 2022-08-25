@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { PERSONAJES } from './mock-personajes';
+import { Component } from '@angular/core';
 import { Personaje } from './personajes.model';
 
 @Component({
@@ -6,17 +7,19 @@ import { Personaje } from './personajes.model';
   templateUrl: './personajes.component.html',
   styleUrls: ['./personajes.component.css']
 })
-export class PersonajesComponent implements OnInit {
+export class PersonajesComponent  {
 
   Personaje: Personaje = {
     id: 1,
     name: 'Blanka',
     QI: 99
   }
+  personajes = PERSONAJES;
+  selectedPersonaje?: Personaje
 
-  constructor() { }
+  //  selectedPersonaje?: isso quer dizer que ele começa como undefined
 
-  ngOnInit(): void {
+  SearchDetail(personaje:Personaje): void{
+    this.selectedPersonaje = personaje
   }
-
 }

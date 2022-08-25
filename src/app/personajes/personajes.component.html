@@ -1,10 +1,26 @@
-<h2> {{ Personaje.name | uppercase }} - Details </h2>
-<div><span> id: </span> {{ Personaje.id }}</div>
-<div><span> name: </span> {{ Personaje.name }}</div>
-<div><span> QI: </span> {{ Personaje.QI }}</div>
+<div class="container">
+  <h2>Meus personagens favoritos de TKOF</h2>
+  <ul>
+    <li *ngFor="let personaje of personajes" (click)="SearchDetail(personaje)">
+      <span> {{ personaje.id }} </span> {{ personaje.name }} -
+      {{ personaje.QI }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="selectedPersonaje">
+  <h2>{{ selectedPersonaje.name | uppercase }} - Details</h2>
+  <div><span> id: </span> {{ selectedPersonaje.id }}</div>
+  <div><span> name: </span> {{ selectedPersonaje.name }}</div>
+  <div><span> QI: </span> {{ selectedPersonaje.QI }}</div>
 
-<div>
-  <label for="name"> Personaje name:</label>
-  <input id="name" type="text" [(ngModel)]="Personaje.name" placeholder="name">
-  <button style="margin-left: 4px; border-radius: 2px; background-color: green"> Add item </button>
+  <div>
+    <label for="name"> Personaje name:</label>
+    <input
+      id="name"
+      type="text"
+      [(ngModel)]="selectedPersonaje.name"
+      placeholder="name"
+    />
+    <button>Buscar detalhe</button>
+  </div>
 </div>

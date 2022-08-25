@@ -1,0 +1,12 @@
+.container{
+  background: rgb(231, 176, 176);
+}
+
+li{
+  list-style: none;
+}
+button {
+  margin-left: 4px;
+  border-radius: 2px;
+  background-color: green
+}
