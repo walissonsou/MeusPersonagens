@@ -1,13 +1,23 @@
+<mat-toolbar color="secondary">
+  <span>
+  <h2>Meus personagens favoritos de
+  <img
+    class="logo"
+    src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png"
+  >
+  </h2>
+</span>
+</mat-toolbar>
 <div class="container">
-  <h2>Meus personagens favoritos de TKOF</h2>
+
   <ul class="personaje">
     <li
     *ngFor="let personaje of personajes"
     [class.selected]=" personaje === selectedPersonaje"
     (click)="SearchDetail(personaje)"
      >
-      <span> {{ personaje.id }} </span> {{ personaje.name }} -
-      {{ personaje.QI }}
+    {{ personaje.name }} -
+
     </li>
   </ul>
 </div>

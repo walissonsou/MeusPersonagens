@@ -2,8 +2,7 @@
   <h2>{{ personaje.name  }} - Details</h2>
   <div><span> id: </span> {{ personaje.id }}</div>
   <div><span> name: </span> {{ personaje.name }}</div>
-  <div><span> QI: </span> {{ personaje.QI }}</div>
-
+  <div><span> img: </span> <img src="{{ personaje.image }}" alt="img"> </div>
   <div>
     <label for="name"> Personaje name:</label>
     <input
@@ -15,3 +14,4 @@
     <button>Buscar detalhe</button>
   </div>
 </div>
+<router-outlet></router-outlet>
