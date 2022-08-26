@@ -1,0 +1,27 @@
+.containerPrincipal{
+  justify-content: center;
+  align-items: column;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+.bry{
+  color:rgb(255, 255, 0)
+}
+.brg {
+  color: green;
+}
+.myelement {
+  justify-content: center;
+  text-align: center;
+  margin: 0 0.5rem;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* don't forget to set a duration! */
+}
+a{
+  text-decoration: none;
+  color: black;
+}
