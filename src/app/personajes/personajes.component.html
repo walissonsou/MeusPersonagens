@@ -14,7 +14,7 @@
 <div class="container">
   <ul class="personaje">
     <li
-      *ngFor="let personaje of personajesQueRecebeOMock"
+      *ngFor="let personaje of personajes"
       [class.selected]="personaje === selectedPersonaje"
       (click)="SearchDetail(personaje)"
     >
@@ -22,4 +22,7 @@
     </li>
   </ul>
 </div>
-<app-personaje-details [selectedPersonaje]="selectedPersonaje"></app-personaje-details>
+<app-personaje-details [personajeDetail]="selectedPersonaje"></app-personaje-details>
+<!-- para fazer uma ligação do meu componente details, com meu component personajes, eu uso PROPERTY
+     e para que meu PERSONAJE DETAILS, receba informações de fora dele, temos que colocar um decorator
+    chamado @Input()-->
