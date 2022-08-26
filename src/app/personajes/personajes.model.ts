@@ -1,4 +1,4 @@
-export interface Personaje {
+export interface IPersonaje {
   id:number,
   name: string,
   image: string,

@@ -1,7 +1,7 @@
 
-import { Personaje } from "./personajes.model";
+import { IPersonaje } from "./personajes.model";
 
-export const PERSONAJES: Personaje[] = [
+export const PERSONAJES: IPersonaje[] = [
     {
       id: 1,
       name: "Zangief",

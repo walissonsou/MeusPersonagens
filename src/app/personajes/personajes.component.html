@@ -1,24 +1,25 @@
 <mat-toolbar color="secondary">
   <span>
-  <h2>Meus personagens favoritos de
-  <img
-    class="logo"
-    src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png"
-  >
-  </h2>
-</span>
+    <h2>
+      Meus personagens favoritos de
+      <a routerLink="/">
+        <img
+        class="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png"
+      />
+      </a>
+    </h2>
+  </span>
 </mat-toolbar>
 <div class="container">
-
   <ul class="personaje">
     <li
-    *ngFor="let personaje of personajes"
-    [class.selected]=" personaje === selectedPersonaje"
-    (click)="SearchDetail(personaje)"
-     >
-    {{ personaje.name }} -
-
+      *ngFor="let personaje of personajesQueRecebeOMock"
+      [class.selected]="personaje === selectedPersonaje"
+      (click)="SearchDetail(personaje)"
+    >
+      {{ personaje.name }}
     </li>
   </ul>
 </div>
-<app-personaje-details [personaje]="selectedPersonaje"></app-personaje-details>
+<app-personaje-details [selectedPersonaje]="selectedPersonaje"></app-personaje-details>

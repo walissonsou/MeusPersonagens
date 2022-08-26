@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Personaje } from '../personajes.model';
+import { IPersonaje } from '../personajes.model';
 
 @Component({
   selector: 'app-personaje-details',
@@ -7,6 +7,6 @@ import { Personaje } from '../personajes.model';
   styleUrls: ['./personaje-details.component.css']
 })
 export class PersonajeDetailsComponent{
-  @Input() personaje?: Personaje
+  @Input() selectedPersonaje?: IPersonaje
   //  selectedPersonaje?: isso quer dizer que ele começa como undefined
 }

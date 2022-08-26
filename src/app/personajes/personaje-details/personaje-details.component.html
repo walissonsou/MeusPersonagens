@@ -1,13 +1,13 @@
-<div *ngIf="personaje">
-  <h2>{{ personaje.name  }} - Details</h2>
-  <div><span> id: </span> {{ personaje.id }}</div>
-  <div><span> name: </span> {{ personaje.name }}</div>
-  <div><span> img: </span> <img src="{{ personaje.image }}" alt="img"> </div>
+<div *ngIf="selectedPersonaje">
+  <h2>{{ selectedPersonaje.name  }} - Details</h2>
+  <div><span> id: </span> {{ selectedPersonaje.id }}</div>
+  <div><span> name: </span> {{ selectedPersonaje.name }}</div>
+  <div><span> avatar: </span> <img src="{{ selectedPersonaje.image }}" alt="img"> </div>
   <div>
-    <label for="name"> Personaje name:</label>
+    <label for="name"> selectedPersonaje name:</label>
     <input
       id="name"
-      [(ngModel)]="personaje.name"
+      [(ngModel)]="selectedPersonaje.name"
       type="text"
       placeholder="name"
     />
