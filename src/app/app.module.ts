@@ -10,14 +10,16 @@ import { PersonajesComponent } from './personajes/personajes.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'
+import { MessagePersonajeComponent } from './message-personaje/message-personaje.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     PersonajesComponent,
     PersonajeDetailsComponent,
-    HomeComponent
-  ],
+    HomeComponent,
+      MessagePersonajeComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

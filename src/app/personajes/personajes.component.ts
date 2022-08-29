@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPersonaje } from './personajes.model';
-import { PersonajesService } from './personajes.service';
+import { PersonajesService } from '../services/personajes.service';
 
 @Component({
   selector: 'app-personajes',
