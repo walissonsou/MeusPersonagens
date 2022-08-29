@@ -22,9 +22,10 @@ export class PersonajesComponent implements OnInit {
     this.getPersonajes()
 
   }
-
   getPersonajes(){
-    this.personajes = this.personajesService.getPersonaje()
+   this.personajesService.getPersonaje().subscribe(
+    perso => this.personajes = perso
+   )
   }
 
   SearchDetail(personaje:IPersonaje): void{
