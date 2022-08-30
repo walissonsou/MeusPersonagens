@@ -1,0 +1,35 @@
+
+<mat-toolbar color="secondary">
+  <span>
+    <h2>
+      Meus personagens favoritos de
+      <a routerLink="/">
+        <img
+        class="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png"
+      />
+      </a>
+    </h2>
+  </span>
+<span fxFlex></span>
+  <button
+  mat-icon-button
+  arial-label="Dashboard"
+  matTooltip="Dashboard"
+  routerLink="/dashboard"> <mat-icon> dashboard </mat-icon></button>
+  <button
+  mat-icon-button
+  arial-label="Dashboard"
+  matTooltip="Dashboard"
+  routerLink="/personagens"> <mat-icon> dashboard </mat-icon></button>
+</mat-toolbar>
+<div
+fxLayout="row"
+fxLayout.xs="column"
+fxLayoutGap="12px"
+fxLayoutAlign="space-between">
+<mat-card class="pointer" *ngFor="let personaje of personajes" routerLink="/personagens/{{personaje.id}}">
+  <mat-card-title>{{ personaje.name }}</mat-card-title>
+</mat-card>
+</div>
+<app-message-personaje></app-message-personaje>

@@ -7,22 +7,34 @@
         class="logo"
         src="https://upload.wikimedia.org/wikipedia/commons/7/71/Street_Fighter_old_logo.png"
       />
+
       </a>
+      - Dashboard
     </h2>
   </span>
+<span fxFlex></span>
+  <button
+  mat-icon-button
+  arial-label="Dashboard"
+  matTooltip="Dashboard"
+  routerLink="/dashboard"> <mat-icon> dashboard </mat-icon></button>
+  <button
+  mat-icon-button
+  arial-label="Dashboard"
+  matTooltip="Dashboard"
+  routerLink="/personagens"> <mat-icon> times </mat-icon></button>
 </mat-toolbar>
 <div class="container">
   <ul class="personaje">
     <li
       *ngFor="let personaje of personajes"
-      [class.selected]="personaje === selectedPersonaje"
-      (click)="SearchDetail(personaje)"
-    >
+      routerLink="/personagens/{{personaje.id}}"
+        >
       {{ personaje.name }}
     </li>
   </ul>
 </div>
-<app-personaje-details [personajeDetail]="selectedPersonaje"></app-personaje-details>
+<!-- <app-personaje-details [personajeDetail]="selectedPersonaje"></app-personaje-details> -->
 <!-- para fazer uma ligação do meu componente details, com meu component personajes, eu uso PROPERTY
      e para que meu PERSONAJE DETAILS, receba informações de fora dele, temos que colocar um decorator
     chamado @Input()-->

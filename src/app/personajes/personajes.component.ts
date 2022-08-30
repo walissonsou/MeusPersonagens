@@ -11,12 +11,12 @@ import { MessageService } from '../services/message.service';
 export class PersonajesComponent implements OnInit {
 
   personajes: IPersonaje[] = []
-  selectedPersonaje?: IPersonaje
+  // selectedPersonaje?: IPersonaje
     //selectedPersonaje?: isso quer dizer que ele começa como undefined
 
   constructor(
-    private personajesService: PersonajesService,
-    private messageService: MessageService){}
+    private personajesService: PersonajesService){}
+    // private messageService: MessageService)
   ngOnInit(): void {
     this.getPersonajes()
 
@@ -27,11 +27,11 @@ export class PersonajesComponent implements OnInit {
    )
   }
 
-  SearchDetail(personaje:IPersonaje): void{
-    this.selectedPersonaje = personaje;
-    // O SearchDetail recebe um personaje,  do tipo Ipersonaje ( interface)
-    // digo que o selectedPersonaje recebe o personaje que foi passado clicado lá.
-    this.messageService.add(`Personaje selcted personaje id = ${personaje.id}`)
+  // SearchDetail(personaje:IPersonaje): void{
+  //   this.selectedPersonaje = personaje;
+  //   // O SearchDetail recebe um personaje,  do tipo Ipersonaje ( interface)
+  //   // digo que o selectedPersonaje recebe o personaje que foi passado clicado lá.
+  //   this.messageService.add(`Personaje selcted personaje id = ${personaje.id}`)
 
-  }
+  // }
 }
