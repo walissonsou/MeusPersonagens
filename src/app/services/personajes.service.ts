@@ -8,13 +8,14 @@ import { MessageService } from './message.service';
 })
 export class PersonajesService {
 
-
   constructor(private messageService: MessageService){
   }
 
   getPersonaje(): Observable<IPersonaje[]> {
-    const personajes = of(PERSONAJES)
+
     //o of ele transforma minha lista em um observable
+    const personajes = of(PERSONAJES)
+    this.messageService.add("Personaje capturou personajes");
     return personajes;
   }
 

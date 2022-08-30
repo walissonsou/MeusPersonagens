@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { IPersonaje } from '../personajes.model';
-import { PersonajesService } from '../../services/personajes.service';
 
 @Component({
   selector: 'app-personaje-details',
@@ -9,9 +8,6 @@ import { PersonajesService } from '../../services/personajes.service';
 })
 export class PersonajeDetailsComponent{
   @Input() personajeDetail?: IPersonaje
+  //  entrada dos dados personajes
   //  selectedPersonaje?: isso quer dizer que ele começa como undefined
-
-  constructor( private personajesService: PersonajesService){
-
-  }
 }

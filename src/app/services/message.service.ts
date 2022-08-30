@@ -17,7 +17,7 @@ export class MessageService {
     this.messages = []
   }
 
-  getMessages(){
+  getMessages(): string[]{
     return this.messages
   }
 }
